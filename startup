@@ -27,7 +27,7 @@ if [ $? -eq 0 ]; then
 fi
 
 ## GNOME PolicyKit and Keyring
-eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+eval $(ssh-agent -s)
 
 ## Volume control for systray
 (sleep 2s && pnmixer) &
@@ -65,6 +65,10 @@ xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Synaptics Off" 8 1 &
 
 ## Disable Capslock
 setxkbmap -option "ctrl:nocaps" &
+
+## Clocks
+xclock -analog -name "analog" &
+xclock -digital -name "date" -strftime "%a %F" &
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.

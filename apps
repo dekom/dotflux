@@ -1,14 +1,17 @@
-[app] (name=xclock) (class=XClock)
-      [Layer]       {Dock}
-      [Position]    (BottomRight)       {0 -15}
+[app] (name=date) (class=XClock)
+      [Layer]       {AboveDock}
+      [Position]    (BottomRight)       {0 150}
       [Deco]        {BORDER}
       [Hidden]      {yes}
       [Sticky]      {yes}
+      [Dimensions]  {150 35}
 [end]
 
-[app] (name=run) (class=URxvt)
-  [Position]    (WINCENTER)     {0 0}
-  [Deco]        {BORDER}
-  [Dimensions]   {255 3}
-  [Layer]       {2}
+[app] (name=analog) (class=XClock)
+      [Layer]       {AboveDock}
+      [Position]    (BottomRight)       {0 0}
+      [Deco]        {BORDER}
+      [Hidden]      {yes}
+      [Sticky]      {yes}
+      [Dimensions]  {150 150}
 [end]
