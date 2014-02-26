@@ -1,0 +1,14 @@
+[app] (name=xclock) (class=XClock)
+      [Layer]       {Dock}
+      [Position]    (BottomRight)       {0 -15}
+      [Deco]        {BORDER}
+      [Hidden]      {yes}
+      [Sticky]      {yes}
+[end]
+
+[app] (name=run) (class=URxvt)
+  [Position]    (WINCENTER)     {0 0}
+  [Deco]        {BORDER}
+  [Dimensions]   {255 3}
+  [Layer]       {2}
+[end]

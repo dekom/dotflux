@@ -1,0 +1,74 @@
+#!/bin/sh
+#
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# Load Xresources
+xrdb -load "${HOME}/.Xresources"
+
+# Change your keymap:
+xmodmap "${HOME}/.Xmodmap"
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+#
+# Debian-local change:
+#   - fbautostart has been added with a quick hack to check to see if it
+#     exists. If it does, we'll start it up by default.
+which fbautostart > /dev/null
+if [ $? -eq 0 ]; then
+    fbautostart
+fi
+
+## GNOME PolicyKit and Keyring
+eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+
+## Volume control for systray
+(sleep 2s && pnmixer) &
+
+## Volume keys daemon
+xfce4-volumed &
+
+## Enable power management
+xfce4-power-manager &
+
+## Start Thunar Daemon
+thunar --daemon &
+
+## Start xscreensaver
+xscreensaver -no-splash &
+
+## Start Clipboard manager
+(sleep 3s && clipit) &
+
+## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
+## Adjust the values according to your preferances.
+xset r rate 250 25 &
+
+## Turn on/off system beep
+xset b off &
+
+## Emacs daemon
+emacs --daemon
+
+## Redshift for eyes
+redshift &
+
+## Disable Touchpad
+xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Synaptics Off" 8 1 &
+
+## Disable Capslock
+setxkbmap -option "ctrl:nocaps" &
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+# exec fluxbox
+# or if you want to keep a log:
+exec fluxbox -log "${HOME}/.fluxbox/log"
