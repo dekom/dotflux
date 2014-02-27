@@ -26,6 +26,12 @@ if [ $? -eq 0 ]; then
     fbautostart
 fi
 
+## Start Compositor
+compton &
+
+## GNOME PolicyKit and Keyring
+## eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+
 ## GNOME PolicyKit and Keyring
 eval $(ssh-agent -s)
 

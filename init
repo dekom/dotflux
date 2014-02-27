@@ -52,7 +52,7 @@ session.screen0.tabFocusModel:	ClickToTabFocus
 session.screen0.autoRaise:	true
 session.screen0.defaultDeco:	NORMAL
 session.screen0.tooltipDelay:	500
-session.screen0.windowPlacement:	RowMinOverlapPlacement
+session.screen0.windowPlacement:	UnderMousePlacement
 session.screen0.colPlacementDirection:	TopToBottom
 session.screen0.maxDisableResize:	false
 session.screen0.allowRemoteActions:	false
