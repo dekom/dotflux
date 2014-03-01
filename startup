@@ -76,6 +76,12 @@ setxkbmap -option "ctrl:nocaps" &
 xclock -analog -name "analog" &
 xclock -digital -name "date" -strftime "%a %F" &
 
+## urxvt daemon
+urxvtd -q -o -f
+
+## rss reader
+liferea &
+
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 

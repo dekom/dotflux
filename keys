@@ -61,7 +61,7 @@ Mod4 9 :Tab 9
 Mod1 F1 :Exec dmenu_run -b
 
 # open a terminal
-Mod4 space :Exec x-terminal-emulator
+Mod4 space :Exec urxvtcd
 
 # open up emacsclient
 Mod1 F3 :Exec emacsclient -c -n -a ""
