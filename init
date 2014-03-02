@@ -56,7 +56,7 @@ session.screen0.fullMaximization:	false
 session.screen0.autoRaise:	true
 session.screen0.menuDelay:	200
 session.screen0.focusNewWindows:	true
-session.screen0.defaultDeco:	NORMAL
+session.screen0.defaultDeco:	TAB
 session.cacheMax:	200
 session.doubleClickInterval:	250
 session.styleOverlay:	~/.fluxbox/overlay
