@@ -1,17 +1,16 @@
 [app] (name=date) (class=XClock)
       [Layer]       {AboveDock}
-      [Position]    (BottomRight)       {0 150}
-      [Deco]        {NONE}
-      [Hidden]      {yes}
-      [Sticky]      {yes}
-      [Dimensions]  {150 35}
-[end]
-
-[app] (name=analog) (class=XClock)
-      [Layer]       {AboveDock}
       [Position]    (BottomRight)       {0 0}
       [Deco]        {NONE}
       [Hidden]      {yes}
       [Sticky]      {yes}
-      [Dimensions]  {150 150}
+[end]
+
+[app] (name=analog) (class=XClock)
+      [Layer]       {AboveDock}
+      [Position]    (BottomRight)       {0 18}
+      [Deco]        {NONE}
+      [Hidden]      {yes}
+      [Sticky]      {yes}
+      [Dimensions]  {75 75}
 [end]

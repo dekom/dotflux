@@ -27,7 +27,7 @@ if [ $? -eq 0 ]; then
 fi
 
 ## Start Compositor
-compton &
+compton -b &
 
 ## GNOME PolicyKit and Keyring
 ## eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
@@ -74,7 +74,7 @@ setxkbmap -option "ctrl:nocaps" &
 
 ## Clocks
 xclock -analog -name "analog" &
-xclock -digital -name "date" -strftime "%a %F" &
+xclock -digital -name "date" -face "Times-10" -padding 0 &
 
 ## urxvt daemon
 urxvtd -q -o -f
