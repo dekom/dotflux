@@ -73,8 +73,8 @@ xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Synaptics Off" 8 1 &
 setxkbmap -option "ctrl:nocaps" &
 
 ## Clocks
-xclock -analog -name "analog" &
-xclock -digital -name "date" -face "Times-10" -padding 0 &
+xclock -analog -name "xanalog" &
+xclock -digital -name "xdigital" -strftime "%a %F %H:%M:%S" &
 
 ## urxvt daemon
 urxvtd -q -o -f

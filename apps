@@ -1,4 +1,4 @@
-[app] (name=date) (class=XClock)
+[app] (name=xdigital) (class=XClock)
       [Layer]       {AboveDock}
       [Position]    (BottomRight)       {0 0}
       [Deco]        {NONE}
@@ -6,7 +6,7 @@
       [Sticky]      {yes}
 [end]
 
-[app] (name=analog) (class=XClock)
+[app] (name=xanalog) (class=XClock)
       [Layer]       {AboveDock}
       [Position]    (BottomRight)       {0 18}
       [Deco]        {NONE}
