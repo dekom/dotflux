@@ -82,6 +82,10 @@ urxvtd -q -o -f
 ## rss reader
 liferea &
 
+## Set proper GOPATH
+export GOPATH="/home/xing/go"
+export PATH="$GOPATH/bin":$PATH
+
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 
